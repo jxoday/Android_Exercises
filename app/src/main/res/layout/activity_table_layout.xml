@@ -8,6 +8,10 @@
     android:orientation="vertical">
 
     <!--
+    三个常用属性：android:collapseColumns; android:shrinkColumns; android:stretchColumns
+    -->
+
+    <!--
     collapseColumns 隐藏列
     collapseColumns="0,2" 隐藏第一个和第三个Button
     -->
