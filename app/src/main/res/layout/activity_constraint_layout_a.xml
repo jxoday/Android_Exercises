@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jinxin.exercises.Layout.ConstraintLayout">
+
+    <!--    相对位置    -->
+
+    <!--
+        要在ConstraintLayout中确定view的位置,必须至少添加一个水平和垂直的约束
+        每一个约束表示到另一个view，父布局，或者不可见的参考线的连接或者对齐
+        如果水平或者垂直方向上没有约束，那么其位置就是0。
+    -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="左对齐"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="右对齐"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="水平居中"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="垂直居中"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="水平居中+垂直居中"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="底部对齐"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <!--
+        例子一：水平方向的相对位置
+        这里主要关注水平方式的属性即可。
+    -->
+
+    <!--<Button
+        android:id="@+id/btn_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00f"
+        android:text="水平参照物"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f00"
+        android:text="left_toLeftOf"
+        app:layout_constraintBottom_toTopOf="@id/btn_center"
+        app:layout_constraintLeft_toLeftOf="@id/btn_center"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0f0"
+        android:text="Right_toLeftOf"
+        app:layout_constraintBottom_toTopOf="@id/btn_center"
+        app:layout_constraintRight_toLeftOf="@id/btn_center"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0f0"
+        android:text="right_torightof"
+        app:layout_constraintRight_toRightOf="@id/btn_center"
+        app:layout_constraintTop_toBottomOf="@id/btn_center"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f00"
+        android:text="left_toRightof"
+        app:layout_constraintLeft_toRightOf="@id/btn_center"
+        app:layout_constraintTop_toBottomOf="@id/btn_center"/>-->
+
+    <!--
+        例子二：竖直方向的相对位置
+        这里主要关注竖直方向的属性即可。
+    -->
+
+    <Button
+        android:id="@+id/btn_center"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="#00f"
+        android:text="竖直参照物"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f00"
+        android:text="top_totopof"
+        app:layout_constraintTop_toTopOf="@id/btn_center"
+        app:layout_constraintRight_toLeftOf="@id/btn_center"/>
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0f0"
+        android:text="Bottom_toTopOf"
+        app:layout_constraintBottom_toTopOf="@id/btn_center"
+        app:layout_constraintEnd_toStartOf="@id/btn_center"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0f0"
+        android:text="Top_toBottomOf"
+        app:layout_constraintLeft_toRightOf="@id/btn_center"
+        app:layout_constraintTop_toBottomOf="@id/btn_center"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f00"
+        android:text="Bottom_toBottomOf"
+        app:layout_constraintLeft_toRightOf="@id/btn_center"
+        app:layout_constraintBottom_toBottomOf="@id/btn_center"/>
+
+
+</android.support.constraint.ConstraintLayout>

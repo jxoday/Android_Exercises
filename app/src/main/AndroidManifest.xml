@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Layout.TableLayout" />
         <activity android:name=".Layout.FrameLayout_a" />
-        <activity android:name=".Layout.FrameLayout_b"></activity>
+        <activity android:name=".Layout.FrameLayout_b" />
         <activity android:name=".Layout.GridLayout" />
         <activity android:name=".Widget.TextView_a">
             <intent-filter>
@@ -20,6 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Layout.ConstraintLayout"></activity>
     </application>
 
 </manifest>
