@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -31,11 +32,65 @@
         app:layout_constraintTop_toBottomOf="@id/btn_center"/>
 
     <Button
+        android:id="@+id/btn_3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="0dp(MATCH_CONSTRAINT)"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_1"/>
+
+
+    <!--
+        宽高比
+        首先，需要将宽或者高设置为0dp（即MATCH_CONSTRAINT），即要适应约束条件
+        然后通过layout_constraintDimensionRatio属性设置一个比率即可
+    -->
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="-------------------宽高比2：1-------------------"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_3"
+        tools:ignore="MissingConstraints" />
+
+    <!--
+        如果宽和高都设置为0dp（MATCH_CONSTRAINT）
+        那么layout_constraintDimensionRatio的值需要先加一个"W,"或者"H"
+        来表示约束宽度或高度
+    -->
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!--
+        百分比宽高
+        要使用百分比，宽或高同样要设置为0dp（MATCH_CONSTRAINT）
+        app:layout_constraintWidth_default="percent" //设置宽为百分比
+        app:layout_constraintWidth_percent="0.3" //0到1之间的值
+        或
+        app:layout_constraintHeight_default="percent" //设置高为百分比
+        app:layout_constraintHeight_percent="0.3" //0到1之间的值
+    -->
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="宽50%"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/btn_5"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>
